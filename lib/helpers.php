@@ -23,7 +23,7 @@ if(!$complete) {
 
 if(getenv('REDIS_URL')) {
   $result = Cache::connect(getenv('REDIS_URL'));
-  var_dump($result);
+  // var_dump($result);
 }
 
 
