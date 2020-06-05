@@ -169,6 +169,11 @@ class Controller {
     }
 
     $ch = curl_init();
+    
+    $headr = array();
+    $headr[] = 'Authorization: Basic '.base64_urlencode($cache->client_id.':'.$cache->client_secret);
+    
+    curl_setopt($ch, CURLOPT_HTTPHEADER,$headr);
     curl_setopt($ch, CURLOPT_URL, getenv('TOKEN_ENDPOINT'));
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
