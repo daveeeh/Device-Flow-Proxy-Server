@@ -3,6 +3,7 @@
 <head>
   <title><?= $this->e($title) ?></title>
   <link href="/assets/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/masking-input.css"/>
   <script src="/assets/script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
