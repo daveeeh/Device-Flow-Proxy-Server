@@ -1,6 +1,6 @@
 <?php $this->layout('layout', ['title' => $title]); ?>
-
-<p>You successfully signed in! Now return to your device to finish.</p>
+<h1>VolumeLink</h1>
+<p>You successfully signed in! Return to your TV to finish.</p>
 
 <script>
 window.history.replaceState({}, false, '/auth/redirect');
