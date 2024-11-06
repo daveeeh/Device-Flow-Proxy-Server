@@ -51,6 +51,7 @@ class Cache {
     if(!isset(self::$redis)) {
       if($host) {
         self::$redis = new Predis\Client($host);
+        self::$redis->auth("default", "mpM6dz50PFHi2xjzZ084H1JjkeCcXQXh");
       } else {
         self::$redis = new Predis\Client();
       }
