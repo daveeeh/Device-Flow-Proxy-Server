@@ -19,6 +19,9 @@ You will need to install Redis if it is not already on your system, or point to 
 
 Define your OAuth server's authorization endpoint and token endpoint URL.
 
+### Azure Deploy
+Startup command /home/site/wwwroot/startup.sh
+
 ### Heroku Deploy
 
 To deploy this in Heroku, you'll need to do the following:

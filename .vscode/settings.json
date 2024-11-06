@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/c43456fe-ffc3-4196-bbf3-c5c7da6bc930/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/device-flow-proxy-server",
+    "appService.deploySubpath": "."
+}

@@ -18,7 +18,7 @@ $router->addRoute('GET', '/auth/redirect', 'Controller::redirect');
 $router->addRoute('POST', '/device/code', 'Controller::generate_code');
 $router->addRoute('POST', '/device/token', 'Controller::access_token');
 
-$dispatcher = $router->getDispatcher();
 $request = Request::createFromGlobals();
+$dispatcher = $router->getDispatcher($request);
 $response = $dispatcher->dispatch($request->getMethod(), $request->getPathInfo());
 $response->send();
