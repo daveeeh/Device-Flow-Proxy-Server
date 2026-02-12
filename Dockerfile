@@ -30,6 +30,12 @@ RUN composer install --no-dev --optimize-autoloader
 # Fix permissions
 RUN chown -R www-data:www-data /var/www/html
 
+# Disable deprecated warnings
+RUN echo "display_errors=Off" >> /usr/local/etc/php/conf.d/render.ini \
+ && echo "display_startup_errors=Off" >> /usr/local/etc/php/conf.d/render.ini \
+ && echo "error_reporting=E_ALL & ~E_DEPRECATED & ~E_NOTICE" >> /usr/local/etc/php/conf.d/render.ini
+
 EXPOSE 80
 
 CMD ["apache2-foreground"]
+
